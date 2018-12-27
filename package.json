@@ -1,0 +1,44 @@
+{
+    "name": "flappy-bird-js",
+    "description": "Flappy Bird Game written in JS",
+    "version": "1.0.0",
+    "main": "Game.js",
+    "license": "GPL-2.0",
+    "author": {
+        "name": "Glen Hughes",
+        "email": "glen.866@gmail.com",
+        "url": "https://glenhughes.me"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GlenHughes/flappy-bird-js.git"
+    },
+    "scripts": {
+        "dev": "webpack-dev-server --open http://localhost:8092 --config webpack/webpack-dev.js --host 0.0.0.0",
+        "build": "webpack --config webpack/webpack-prod.js --env=production --progress --profile --colors"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+        "@babel/preset-env": "^7.1.0",
+        "babel-loader": "^8.0.4",
+        "clean-webpack-plugin": "^0.1.19",
+        "compression-webpack-plugin": "^2.0.0",
+        "copy-webpack-plugin": "^4.5.2",
+        "css-loader": "^1.0.0",
+        "eslint": "^5.4.0",
+        "file-loader": "^1.1.11",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.4.1",
+        "optimize-css-assets-webpack-plugin": "^5.0.0",
+        "raw-loader": "^0.5.1",
+        "uglifyjs-webpack-plugin": "^1.2.7",
+        "webpack": "^4.16.3",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.5",
+        "webpack-merge": "^4.1.3"
+    }
+}
