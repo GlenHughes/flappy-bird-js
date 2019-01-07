@@ -1,3 +1,5 @@
+# GAME IS NOT WORKING AND IS CURRENTLY BEING DEVELOPED!
+
 # Flappy Bird JS
 
 This is a basic example of how to build a Flappy Bird style game using pure JS and HTML5 canvas. This is just a demo and shouldn't be taken seriously. Please feel free to fork and or make PR's to make this better for fun!

@@ -9,8 +9,9 @@ const defaultConfig = {
     container: 'game-container',
     gameOver: '#game-over',
     birdColour: '#fff',
-    birdWidth: 10,
-    birdHeight: 10,
+    outlineColour: '#000',
+    birdWidth: 25,
+    birdHeight: 25,
 }
 
 export default class FlappyBirdJS {
@@ -20,7 +21,11 @@ export default class FlappyBirdJS {
         this.container = document.getElementById(this.config.container);
         this.gameOverEl = this.container.querySelector(this.config.gameOver);
         this.score = new Score();
-        this.bird = new Bird();
+        this.bird = new Bird(
+            this.config.birdColour,
+            this.config.birdWidth,
+            this.config.birdHeight
+        );
         this.canvas = new Canvas(
             400,
             400,
@@ -57,7 +62,7 @@ export default class FlappyBirdJS {
 
     draw() {
         this.canvas.clear();
-
+        this.bird.draw(25, this.bird.height / 2);
         // game running code
     }
 

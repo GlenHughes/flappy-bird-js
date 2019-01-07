@@ -1,7 +1,6 @@
 export default class Bird {
-    constructor(birdColour, outlineColour, width, height) {
+    constructor(birdColour, width, height) {
         this.birdColour = birdColour;
-        this.outlineColour = outlineColour;
         this.squares = [];
         this.width = width;
         this.height = height;
@@ -21,21 +20,15 @@ export default class Bird {
 
     draw(x, y) {
         // draw square
-        this.canvas.context.fillStyle = this.snakeColour
-        this.canvas.context.fillRect(
+        this.canvas.context.fillStyle = this.birdColour
+        this.canvas.context.beginPath();
+        this.canvas.context.ellipse(
             x * this.width, 
             y * this.height, 
             this.width, 
-            this.height
+            this.height,
+            Math.PI / 4, 0, 2 * Math.PI
         );
-
-        // draw outline
-        this.canvas.context.fillStyle = this.outlineColour;
-        this.canvas.context.strokeRect(
-            x * this.width, 
-            y * this.height, 
-            this.width,
-            this.height
-        );
+        this.canvas.context.stroke();
     }
 }
